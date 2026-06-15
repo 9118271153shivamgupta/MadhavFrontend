@@ -1,18 +1,34 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { footerLinks } from '../data/footerData';
 import { Mail, Phone, MapPin, ArrowUpRight } from 'lucide-react';
 
 const Footer = () => {
+  // Navigation mapping synced directly from your layouts
+  const navigationLinks = [
+    { name: "Home", path: "/" },
+    { name: "About us", path: "/about" },
+    { name: "College", path: "/college" },
+    { name: "Admission", path: "/admission" },
+    { name: "Course", path: "/course" },
+    { name: "Contact us", path: "/contact" }
+  ];
+
+  const supportTools = [
+    { name: "Career Counseling", path: "#" },
+    { name: "Scholarship Check", path: "#" },
+    { name: "Seat Matrix 2026", path: "#" },
+    { name: "Free Expert Call", path: "#" }
+  ];
+
   return (
     <footer className="w-full bg-slate-900 text-slate-300 dark:bg-slate-950 dark:text-slate-400 border-t border-slate-800 transition-colors duration-300 font-poppins pt-16 pb-8">
       <div className="layout-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 mb-12">
         
-        {/* Brand Section */}
+        {/* Brand/Identity Column */}
         <div className="lg:col-span-2 space-y-5">
           <Link to="/" className="inline-block">
             <img 
-              src="/logo_bcada4.png" // Public folder logo reference point
+              src="/logo_bcada4.png" //
               alt="Madhav Study Logo" 
               className="h-12 w-auto object-contain brightness-110 contrast-125 dark:brightness-100"
               onError={(e) => {
@@ -26,10 +42,10 @@ const Footer = () => {
           </Link>
           
           <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
-            India's leading education portal driving career counseling insights, direct institutional tie-ups, and verified counselor allocations.
+            India's trusted institutional counseling hub mapping authorized direct enrollment structures and strategic partner grid selections.
           </p>
 
-          {/* Social Icons Inline SVGs to avoid Vite build export failures */}
+          {/* Social Icons SVGs */}
           <div className="flex items-center gap-3 pt-2">
             <a href="#" className="w-9 h-9 rounded-xl bg-slate-800 hover:bg-brand-orange text-slate-400 hover:text-white flex items-center justify-center transition-all duration-200 border border-slate-700/50">
               <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M9 8H7v3h2v9h3v-9h3l.5-3H12V6c0-.88.39-1 1-1h2V2h-3c-2.87 0-4 1.25-4 4v2z"/></svg>
@@ -43,15 +59,14 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* 🚀 Dynamic Portal Links Column from your uploaded Image */}
+        {/* Quick Links Column (Synced from Image List) */}
         <div>
           <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-5 pb-2 border-b border-slate-800 inline-block">
             Quick Links
           </h4>
           <ul className="space-y-3 text-sm">
-            {footerLinks.navigation.map((link, i) => (
+            {navigationLinks.map((link, i) => (
               <li key={i}>
-                {/* Maps exactly to: Home, About us, College, Admission, Course, Contact us */}
                 <Link to={link.path} className="hover:text-brand-orange flex items-center gap-1 group transition-colors">
                   <span>{link.name}</span>
                   <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -61,13 +76,13 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Services / Utilities Column */}
+        {/* Support Tools Column */}
         <div>
           <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-5 pb-2 border-b border-slate-800 inline-block">
             Counseling Tools
           </h4>
           <ul className="space-y-3 text-sm">
-            {footerLinks.services.map((link, i) => (
+            {supportTools.map((link, i) => (
               <li key={i}>
                 <Link to={link.path} className="hover:text-brand-orange flex items-center gap-1 group transition-colors">
                   <span>{link.name}</span>
@@ -78,20 +93,30 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Support Coordinates Panel */}
+        {/* 🎯 Contact/Coordinates Section (Updated from Address Image) */}
         <div>
           <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-5 pb-2 border-b border-slate-800 inline-block">
             Get In Touch
           </h4>
           <ul className="space-y-4 text-xs sm:text-sm">
+            {/* Real Accurate Address Tag */}
             <li className="flex items-start gap-3">
               <MapPin size={18} className="text-brand-orange shrink-0 mt-0.5" />
-              <span className="text-slate-400">G-Block, Sector 63, Noida, Uttar Pradesh - 201301</span>
+              <span className="text-slate-400 leading-relaxed">
+                Plot No. 11/1, Knowledge Park III, Greater Noida, Uttar Pradesh 201310
+              </span>
             </li>
-            <li className="flex items-center gap-3">
-              <Phone size={16} className="text-brand-orange shrink-0" />
-              <a href="tel:+919876543210" className="hover:text-brand-orange font-medium">+91 98765 43210</a>
+            
+            {/* Real Phone Multi-routing Line */}
+            <li className="flex items-start gap-3">
+              <Phone size={16} className="text-brand-orange shrink-0 mt-1" />
+              <div className="flex flex-col gap-1.5 font-medium text-slate-300">
+                <a href="tel:+918744077832" className="hover:text-brand-orange transition-colors">+91 87440 77832</a>
+                <a href="tel:+918368665374" className="hover:text-brand-orange transition-colors">+91 83686 65374</a>
+                <a href="tel:+918882215030" className="hover:text-brand-orange transition-colors">+91 88822 15030</a>
+              </div>
             </li>
+
             <li className="flex items-center gap-3">
               <Mail size={16} className="text-brand-orange shrink-0" />
               <a href="mailto:info@madhavstudy.com" className="hover:text-brand-orange font-medium">info@madhavstudy.com</a>
@@ -101,10 +126,10 @@ const Footer = () => {
 
       </div>
 
-      {/* Bottom Copyright Area */}
+      {/* Bottom Legal Copyright Strip */}
       <div className="border-t border-slate-800/80 pt-8 mt-4 text-center text-xs text-slate-500 font-medium">
         <div className="layout-wrapper flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p>&copy; 2026 Madhav Study. All rights reserved by Academic Partners.</p>
+          <p>&copy; 2026 Madhav Study. All rights reserved by Corporate Management.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-slate-400 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-slate-400 transition-colors">Terms of Service</a>

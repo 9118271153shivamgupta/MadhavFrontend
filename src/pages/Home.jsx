@@ -17,9 +17,7 @@ const Home = () => {
       <PartnerUniversities />
 
       {/* Secondary Main Page Feature Layout Content block below */}
-      <div className="layout-wrapper py-12 text-center text-text-muted text-xs sm:text-sm font-medium">
-        MadhavFrontend College Intelligence Dashboard Engine &bull; Academic Portal 2026
-      </div>
+      
       
     </div>
   );
