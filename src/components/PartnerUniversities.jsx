@@ -1,9 +1,17 @@
 import React from 'react';
-import { ExternalLink, School, MapPin, Award } from 'lucide-react';
-// 🚀 Dynamic cleaner approach - Data file imported separate
+import { useNavigate } from 'react-router-dom';
+import { School, ArrowRight } from 'lucide-react';
 import { universityNetworkData } from '../data/universityNetworkData';
+import PartnerCollegeCard from './PartnerCollegeCard';
 
-const PartnerUniversities = () => {
+const PartnerUniversities = ({ isAllView = false }) => {
+  const navigate = useNavigate();
+
+  // Home Page logic: max 16 items. College Page logic: show all 41 entries.
+  const displayColleges = isAllView 
+    ? universityNetworkData 
+    : universityNetworkData.slice(0, 16);
+
   return (
     <div className="w-full py-16 md:py-20 bg-bg-main transition-colors duration-300 font-poppins border-t border-border-main/60">
       <div className="layout-wrapper">
@@ -29,66 +37,29 @@ const PartnerUniversities = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-orange opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-orange"></span>
             </span>
-            <span>40+ Premium Colleges Affiliated</span>
+            <span>{universityNetworkData.length} Premium Colleges Affiliated</span>
           </div>
         </div>
 
-        {/* 💎 HIGHLY PREMIUM DESIGN COMPONENT GRID */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {universityNetworkData.map((college) => (
-            <a 
-              key={college.id}
-              href={college.url}
-              target="_blank" 
-              rel="noopener noreferrer"
-              /* Cards auto adapt to themes cleanly, with a fine lift-up click shadow pattern */
-              className="bg-card-bg border border-border-main p-6 rounded-2xl shadow-sm hover:shadow-2xl hover:border-brand-orange/40 dark:hover:border-brand-orange/30 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden active:scale-98"
-            >
-              
-              {/* Background abstract overlay element for high fidelity depth */}
-              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-brand-orange/5 to-transparent rounded-bl-full transition-all group-hover:from-brand-orange/10" />
-
-              <div>
-                {/* Upper row: Avatar Placeholder + Meta Tag */}
-                <div className="flex items-start justify-between mb-4">
-                  <div className="w-14 h-14 rounded-2xl bg-slate-50 dark:bg-slate-800 text-brand-blue dark:text-brand-orange font-extrabold text-sm tracking-wider flex items-center justify-center border border-border-main/50 group-hover:bg-brand-orange group-hover:text-white dark:group-hover:text-white transition-all duration-300 shadow-sm">
-                    {college.logoText}
-                  </div>
-                  
-                  {/* Accreditation Tag */}
-                  <span className="inline-flex items-center gap-1 bg-slate-100 dark:bg-slate-800/80 text-white font-semibold text-[10px] px-2.5 py-1 rounded-md tracking-wide group-hover:bg-brand-orange/10 group-hover:text-brand-orange transition-colors">
-                    <Award size={10} />
-                    {college.rating}
-                  </span>
-                </div>
-
-                {/* University Name */}
-                <h3 className="text-base font-bold text-text-main group-hover:text-brand-orange transition-colors duration-200 line-clamp-1">
-                  {college.shortName}
-                </h3>
-                
-                <p className="text-xs text-text-muted font-light mt-1 line-clamp-1">
-                  {college.name}
-                </p>
-              </div>
-
-              {/* Bottom Metadata row */}
-              <div className="mt-5 pt-3 border-t border-border-main/40 flex items-center justify-between text-xs text-text-muted">
-                <div className="flex items-center gap-1 opacity-80">
-                  <MapPin size={12} className="text-brand-orange" />
-                  <span>{college.location}</span>
-                </div>
-                
-                {/* Interactive Dynamic Redirect Visual */}
-                <div className="flex items-center gap-1 font-bold text-[11px] text-text-muted group-hover:text-brand-orange transition-colors">
-                  <span>Visit Portal</span>
-                  <ExternalLink size={12} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </div>
-              </div>
-
-            </a>
+        {/* 💎 Fully Adaptive Grid Layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+          {displayColleges.map((college) => (
+            <PartnerCollegeCard key={college.id} college={college} />
           ))}
         </div>
+
+        {/* 🚀 FORCE BUTTON VIEW: Hamesha dikhega Home page par */}
+        {!isAllView && (
+          <div className="mt-12 text-center">
+            <button 
+              onClick={() => navigate('/college')}
+              className="inline-flex items-center gap-2 bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold text-sm px-6 py-3 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group active:scale-95 cursor-pointer"
+            >
+              <span>Explore All Universities</span>
+              <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+            </button>
+          </div>
+        )}
 
       </div>
     </div>
