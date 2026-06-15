@@ -30,22 +30,19 @@ const PartnerCollegeCard = ({ college }) => {
         {college.name}
       </h3>
       
-      <p className="text-text-muted text-xs sm:text-sm mb-4 font-normal">
+      {/* <p className="text-text-muted text-xs sm:text-sm mb-4 font-normal">
         📍 {college.location} &bull; Estd. {college.estd}
-      </p>
+      </p> */}
 
       {/* Footer metadata grid area block */}
-      <div className="mt-auto pt-2 border-t border-border-main/50 flex items-center justify-between">
-        <span className="text-xs text-brand-orange font-semibold tracking-wide">
-          {college.courses}
-        </span>
+      <div className="mt-auto pt-2 border-t border-border-main/50 flex items-center w-full">
         <a 
           href={college.url} 
           target="_blank" 
           rel="noopener noreferrer"
-          className="bg-counselor-blue text-white text-xs px-3 py-1.5 rounded hover:opacity-90 transition-all shadow-sm active:scale-95 text-center cursor-pointer inline-block"
+          className="w-full bg-counselor-blue text-white text-xs py-2 rounded hover:opacity-90 transition-all shadow-sm active:scale-95 text-center cursor-pointer inline-block font-medium"
         >
-          View Profile
+          View College
         </a>
       </div>
 

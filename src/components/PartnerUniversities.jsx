@@ -24,7 +24,7 @@ const PartnerUniversities = ({ isAllView = false }) => {
               <span>Institutional Tie-ups</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-text-main tracking-tight">
-              Our Official University <span className="text-brand-orange">Admission Partners</span>
+              Our  Tie-ups <span className="text-brand-orange">Colleges</span>
             </h2>
             <p className="text-text-muted text-sm md:text-base mt-2 max-w-2xl font-light">
               Madhav Study handles authorized counseling and direct institutional enrollment with top-tier education hubs across the nation.
@@ -55,7 +55,7 @@ const PartnerUniversities = ({ isAllView = false }) => {
               onClick={() => navigate('/college')}
               className="inline-flex items-center gap-2 bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold text-sm px-6 py-3 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group active:scale-95 cursor-pointer"
             >
-              <span>Explore All Universities</span>
+              <span>Explore All Colleges</span>
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
             </button>
           </div>

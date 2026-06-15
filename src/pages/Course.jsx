@@ -154,7 +154,7 @@ const Course = () => {
       {/* Footer Legal Disclaimers mapping explicit image text configurations */}
       <div className="mt-8 p-4 bg-brand-blue/5 dark:bg-slate-900 border border-brand-blue/10 dark:border-slate-800 rounded-xl flex items-start gap-3">
         <HelpCircle size={20} className="text-brand-orange shrink-0 mt-0.5" />
-        <p className="text-xs sm:text-sm text-text-muted font-medium leading-relaxed">
+        <p className="text-xs sm:text-sm text-white font-medium leading-relaxed">
           <strong className="text-text-main font-bold">NOTE :</strong> All Courses Exam Fees (As per University Norms) will be applied systematically at the duration of final verification registration frameworks.
         </p>
       </div>
