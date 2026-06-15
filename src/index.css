@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Dynamic Tokens matching Madhav Study branding style guide */
+  --color-bg-main: #f8fafc;          /* Light mode: clean slate white */
+  --color-text-main: #0a192f;        /* Light mode: deep academic navy */
+  --color-card-bg: #ffffff;          /* Light mode: pure white cards */
+  --color-border-main: #e2e8f0;      /* Light mode: crisp boundary lines */
+  --color-text-muted: #475569;
+
+  /* Custom branding configurations */
+  --color-brand-orange: #ff6600;     /* Madhav Study signature premium orange */
+  --color-brand-blue: #003366;       /* Madhav Study solid navy theme contrast */
+  --color-counselor-blue: #0f2d4a;
+  --font-poppins: "Poppins", sans-serif;
+}
+
+.dark {
+  --color-bg-main: #060c14;          /* Dark mode: ultra dark corporate space */
+  --color-text-main: #f1f5f9;        /* Dark mode: crisp text visibility */
+  --color-card-bg: #0d1b2a;          /* Dark mode: dark block card containers */
+  --color-border-main: #1e293b;      /* Dark mode: low emission borders */
+  --color-text-muted: #94a3b8;
+}
+
+body {
+  font-family: var(--font-poppins);
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@utility layout-wrapper {
+  width: 100%;
+  max-width: 88rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  
+  @media (min-width: 640px) { padding-left: 1.5rem; padding-right: 1.5rem; }
+  @media (min-width: 1024px) { padding-left: 2rem; padding-right: 2rem; }
+}
+
+@utility nav-link {
+  color: var(--color-text-main);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: color 0.2s ease, opacity 0.2s ease;
+
+  &:hover {
+    color: var(--color-brand-orange);
+    opacity: 1;
+  }
+}
+
+/* Custom overlay classes for pristine search bar display patterns */
+@utility hero-overlay {
+  background: linear-gradient(to right, rgba(0, 51, 102, 0.85), rgba(255, 102, 0, 0.45));
+}
