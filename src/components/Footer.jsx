@@ -28,7 +28,7 @@ const Footer = () => {
         <div className="lg:col-span-2 space-y-5">
           <Link to="/" className="inline-block">
             <img 
-              src="/logo_bcada4.png" //
+              src="/logo_bcada4.png"
               alt="Madhav Study Logo" 
               className="h-12 w-auto object-contain brightness-110 contrast-125 dark:brightness-100"
               onError={(e) => {
@@ -59,7 +59,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Quick Links Column (Synced from Image List) */}
+        {/* Quick Links Column */}
         <div>
           <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-5 pb-2 border-b border-slate-800 inline-block">
             Quick Links
@@ -93,13 +93,12 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* 🎯 Contact/Coordinates Section (Updated from Address Image) */}
+        {/* Contact/Coordinates Section */}
         <div>
           <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-5 pb-2 border-b border-slate-800 inline-block">
             Get In Touch
           </h4>
           <ul className="space-y-4 text-xs sm:text-sm">
-            {/* Real Accurate Address Tag */}
             <li className="flex items-start gap-3">
               <MapPin size={18} className="text-brand-orange shrink-0 mt-0.5" />
               <span className="text-slate-400 leading-relaxed">
@@ -111,9 +110,9 @@ const Footer = () => {
             <li className="flex items-start gap-3">
               <Phone size={16} className="text-brand-orange shrink-0 mt-1" />
               <div className="flex flex-col gap-1.5 font-medium text-slate-300">
-                <a href="tel:+918744077832" className="hover:text-brand-orange transition-colors">+91 87440 77832</a>
-                <a href="tel:+918368665374" className="hover:text-brand-orange transition-colors">+91 83686 65374</a>
-                <a href="tel:+918882215030" className="hover:text-brand-orange transition-colors">+91 88822 15030</a>
+                <a href="tel:+919319891418" className="hover:text-brand-orange transition-colors">+91 93198 91418</a>
+                {/* <a href="tel:+918368665374" className="hover:text-brand-orange transition-colors">+91 83686 65374</a>
+                <a href="tel:+918882215030" className="hover:text-brand-orange transition-colors">+91 88822 15030</a> */}
               </div>
             </li>
 

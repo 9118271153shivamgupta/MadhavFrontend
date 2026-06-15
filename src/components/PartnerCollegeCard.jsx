@@ -42,7 +42,7 @@ const PartnerCollegeCard = ({ college }) => {
           rel="noopener noreferrer"
           className="w-full bg-counselor-blue text-white text-xs py-2 rounded hover:opacity-90 transition-all shadow-sm active:scale-95 text-center cursor-pointer inline-block font-medium"
         >
-          View College
+          Visit Website
         </a>
       </div>
 

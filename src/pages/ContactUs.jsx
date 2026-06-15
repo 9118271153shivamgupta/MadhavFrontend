@@ -22,11 +22,11 @@ const ContactUs = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  // Click hone par yeh function WhatsApp par message redirect karega
+  // Click hone par yeh function WhatsApp par message redirect karega naye number ke sath
   const handleFormSubmit = (e) => {
     e.preventDefault();
     
-    const phoneNumber = "918744077832"; 
+    const phoneNumber = "919319891418"; // New primary number updated
     
     // Formatting the WhatsApp text professionally
     const rawMessage = `*New Admission Consultation Request* 🎓\n\n` +
@@ -41,7 +41,7 @@ const ContactUs = () => {
   };
 
   const handleWhatsAppChat = () => {
-    const phoneNumber = "918744077832"; // Mapped from primary assets
+    const phoneNumber = "919319891418"; // Mapped from new primary asset
     const textMessage = encodeURIComponent("Hello Madhav Study Team, I am looking forward to connecting with your support helpdesk for admission consultation.");
     window.open(`https://wa.me/${phoneNumber}?text=${textMessage}`, '_blank');
   };
@@ -112,9 +112,10 @@ const ContactUs = () => {
                 <div className="space-y-1">
                   <h4 className="text-sm font-bold tracking-tight text-text-main">Phone Number</h4>
                   <p className="text-xs text-text-muted font-medium tracking-wide space-y-1">
-                    <span className="block text-brand-orange font-semibold">+91 8744077832</span>
-                    <span className="block opacity-80">+91 8368665374</span>
-                    <span className="block opacity-80">+91 8882215030</span>
+                    {/* Primary Number Updated */}
+                    <span className="block text-brand-orange font-semibold">+91 9319891418</span>
+                    {/* <span className="block opacity-80">+91 8368665374</span> */}
+                    {/* <span className="block opacity-80">+91 8882215030</span> */}
                   </p>
                 </div>
               </div>
@@ -271,18 +272,18 @@ const ContactUs = () => {
 
       {/* 🗺️ 3. DYNAMIC SATELLITE MAP HUB */}
       <div className="w-full h-[350px] md:h-[450px] border-t border-border-main relative bg-slate-100">
-  <iframe 
-    title="Madhav Study Center Terminal Location Map"
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.1703277866386!2d77.4875070749246!3d28.474416691244365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cea0da9777f6f%3A0x34ea9dfc8642a624!2s11%2F1%2C%20Knowledge%20Park%20III%2C%20Greater%20Noida%2C%20Uttar%20Pradesh%20201310!5e0!3m2!1sen!2sin!4v1781528977045!5m2!1sen!2sin" 
-    width="100%" 
-    height="100%" 
-    style={{ border: 0 }} 
-    allowFullScreen="" 
-    loading="lazy" 
-    referrerPolicy="no-referrer-when-downgrade"
-    className="grayscale opacity-95 dark:invert dark:hue-rotate-180"
-  />
-</div>
+        <iframe 
+          title="Madhav Study Center Terminal Location Map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.1703277866386!2d77.4875070749246!3d28.474416691244365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cea0da9777f6f%3A0x34ea9dfc8642a624!2s11%2F1%2C%20Knowledge%20Park%20III%2C%20Greater%20Noida%2C%20Uttar%20Pradesh%20201310!5e0!3m2!1sen!2sin!4v1781528977045!5m2!1sen!2sin" 
+          width="100%" 
+          height="100%" 
+          style={{ border: 0 }} 
+          allowFullScreen="" 
+          loading="lazy" 
+          referrerPolicy="no-referrer-when-downgrade"
+          className="grayscale opacity-95 dark:invert dark:hue-rotate-180"
+        />
+      </div>
 
       {/* 🟢 4. DYNAMIC FLOATING COUNSELOR DESK WHATSAPP TRIGGER OVERLAY */}
       <button
@@ -300,4 +301,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default ContactUs; 

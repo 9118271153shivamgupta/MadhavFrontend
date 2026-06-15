@@ -18,7 +18,7 @@ const HeroSearch = () => {
   // Form Submit hone par WhatsApp par Redirect karne ka function
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    const phoneNumber = "918744077832";
+    const phoneNumber = "919319891418"; // Updated to your new number
     
     const rawMessage = `*New Admission Consultation Request* 🎓\n\n` +
                        `👤 *Name:* ${formData.name}\n` +
@@ -68,25 +68,25 @@ const HeroSearch = () => {
           Empowering future innovators through world-class engineering, management research, and advanced technical skills. Discover 50+ streams, industry-aligned labs, and globally verified placement matrix records.
         </p>
 
-        {/* 🛠️ ACTION BUTTONS (Replaced Search Bar) */}
+        {/* 🛠️ ACTION BUTTONS */}
         <div className="w-full max-w-xl flex flex-col sm:flex-row items-center justify-center gap-4 transition-all duration-300">
           
-          {/* WhatsApp Us Button */}
+          {/* WhatsApp Us Button - 'lg:hidden' added to hide it on Desktop view */}
           <button 
             onClick={() => setIsFormOpen(true)}
-            className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm md:text-base px-8 py-4 rounded-xl transition-all active:scale-98 shadow-lg shadow-emerald-600/20 cursor-pointer flex items-center justify-center gap-2.5"
+            className="w-full sm:w-auto lg:hidden bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm md:text-base px-8 py-4 rounded-xl transition-all active:scale-98 shadow-lg shadow-emerald-600/20 cursor-pointer flex items-center justify-center gap-2.5"
           >
             <MessageSquare size={20} />
             <span>WhatsApp Us</span>
           </button>
 
-          {/* Call Us Button */}
+          {/* Call Us Button with updated number */}
           <a 
-            href="tel:+918744077832"
+            href="tel:+919319891418"
             className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange/95 text-white font-semibold text-sm md:text-base px-8 py-4 rounded-xl transition-all active:scale-98 shadow-lg shadow-brand-orange/20 flex items-center justify-center gap-2.5"
           >
             <Phone size={19} />
-            <span>Call Us: +91 8744077832</span>
+            <span>Call Us: +91 9319891418</span>
           </a>
           
         </div>

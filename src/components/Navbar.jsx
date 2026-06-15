@@ -23,7 +23,7 @@ const Navbar = ({ isDark, setIsDark }) => {
   // Form Submit hone par WhatsApp par Redirect karne ka function
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    const phoneNumber = "918744077832";
+    const phoneNumber = "919319891418"; // Updated to new contact coordinate
     
     const rawMessage = `*New Admission Consultation Request* 🎓\n\n` +
                        `👤 *Name:* ${formData.name}\n` +
@@ -45,7 +45,7 @@ const Navbar = ({ isDark, setIsDark }) => {
       <div className="layout-wrapper">
         <div className="flex items-center justify-between h-20">
           
-          {/* Logo Brand Title - Restored to original layout structure */}
+          {/* Logo Brand Title */}
           <Link to="/" className="flex-shrink-0 select-none block py-2">
             <div className="h-12 w-auto max-w-[150px] sm:max-w-[180px] md:max-w-[220px] flex items-center justify-start">
               <img 
@@ -61,7 +61,6 @@ const Navbar = ({ isDark, setIsDark }) => {
             <Link to="/" className={`nav-link ${isActive('/') ? 'text-brand-orange font-semibold' : ''}`}>Home</Link>
             <Link to="/about" className={`nav-link ${isActive('/about') ? 'text-brand-orange font-semibold' : ''}`}>About us</Link>
             <Link to="/college" className={`nav-link ${isActive('/college') ? 'text-brand-orange font-semibold' : ''}`}>College</Link>
-            {/* <Link to="/admission" className={`nav-link ${isActive('/admission') ? 'text-brand-orange font-semibold' : ''}`}>Admission</Link> */}
             <Link to="/course" className={`nav-link ${isActive('/course') ? 'text-brand-orange font-semibold' : ''}`}>Course</Link>
             <Link to="/contact" className={`nav-link ${isActive('/contact') ? 'text-brand-orange font-semibold' : ''}`}>Contact us</Link>
           </div>
@@ -69,22 +68,13 @@ const Navbar = ({ isDark, setIsDark }) => {
           {/* Action Tools Section (Desktop) */}
           <div className="hidden lg:flex items-center space-x-3 xl:space-x-4">
             
-            {/* WhatsApp Us Button - Opens Modal Form */}
-            <button 
-              onClick={() => setIsFormOpen(true)}
-              className="bg-emerald-600 text-white px-3 py-2 rounded-md text-xs xl:text-sm flex items-center gap-2 hover:bg-emerald-500 active:scale-95 transition-all cursor-pointer"
-            >
-              <MessageSquare size={15} />
-              <span>WhatsApp Us</span>
-            </button>
-            
-            {/* Call Us Button */}
+            {/* Call Us Button with new number */}
             <a 
-              href="tel:+918744077832"
+              href="tel:+919319891418"
               className="bg-brand-orange text-white px-4 py-2 rounded-md text-sm font-medium flex items-center gap-2 hover:opacity-95 active:scale-95 transition-all"
             >
               <Phone size={15} />
-              <span>Call Us: +91 8744077832</span>
+              <span>Call Us: +91 9319891418</span>
             </a>
 
             {/* Global Theme Toggle */}
@@ -94,8 +84,6 @@ const Navbar = ({ isDark, setIsDark }) => {
             >
               {isDark ? <Sun size={18} className="text-yellow-400" /> : <Moon size={18} />}
             </button>
-            
-            {/* <button className="text-text-main p-2 hover:text-brand-orange transition-colors"><Search size={18} /></button> */}
           </div>
 
           {/* Tablet & Mobile Layout Handlers */}
@@ -103,7 +91,6 @@ const Navbar = ({ isDark, setIsDark }) => {
             <button onClick={() => setIsDark(!isDark)} className="text-text-main p-2 rounded-full">
               {isDark ? <Sun size={20} className="text-yellow-400" /> : <Moon size={20} />}
             </button>
-            <button className="text-text-main p-2"><Search size={20} /></button>
             <button onClick={() => setIsOpen(!isOpen)} className="text-text-main p-2 transition-transform duration-200">
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -119,20 +106,21 @@ const Navbar = ({ isDark, setIsDark }) => {
             <Link to="/" onClick={() => setIsOpen(false)} className={`py-3 px-2 rounded-md block ${isActive('/') ? 'bg-brand-orange/10 text-brand-orange font-semibold' : 'text-text-main'}`}>Home</Link>
             <Link to="/about" onClick={() => setIsOpen(false)} className={`py-3 px-2 rounded-md block ${isActive('/about') ? 'bg-brand-orange/10 text-brand-orange font-semibold' : 'text-text-main'}`}>About us</Link>
             <Link to="/college" onClick={() => setIsOpen(false)} className={`py-3 px-2 rounded-md block ${isActive('/college') ? 'bg-brand-orange/10 text-brand-orange font-semibold' : 'text-text-main'}`}>College</Link>
-            <Link to="/admission" onClick={() => setIsOpen(false)} className={`py-3 px-2 rounded-md block ${isActive('/admission') ? 'bg-brand-orange/10 text-brand-orange font-semibold' : 'text-text-main'}`}>Admission</Link>
             <Link to="/course" onClick={() => setIsOpen(false)} className={`py-3 px-2 rounded-md block ${isActive('/course') ? 'bg-brand-orange/10 text-brand-orange font-semibold' : 'text-text-main'}`}>Course</Link>
             <Link to="/contact" onClick={() => setIsOpen(false)} className={`py-3 px-2 rounded-md block ${isActive('/contact') ? 'bg-brand-orange/10 text-brand-orange font-semibold' : 'text-text-main'}`}>Contact us</Link>
           </div>
           
           <div className="pt-4 border-t border-border-main flex flex-col sm:flex-row gap-3">
+            {/* WhatsApp Us Button */}
             <button 
               onClick={() => { setIsOpen(false); setIsFormOpen(true); }}
               className="bg-emerald-600 text-white py-3 px-4 rounded-md flex items-center justify-center gap-2 flex-1 text-sm cursor-pointer"
             >
               <MessageSquare size={16} /> WhatsApp Us
             </button>
+            {/* Call Us Button with new number */}
             <a 
-              href="tel:+918744077832"
+              href="tel:+919319891418"
               className="bg-brand-orange text-white py-3 px-4 rounded-md flex items-center justify-center gap-2 flex-1 text-sm text-center font-medium"
             >
               <Phone size={16} /> Call Us

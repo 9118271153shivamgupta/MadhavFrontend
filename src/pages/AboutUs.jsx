@@ -13,9 +13,9 @@ import {
 
 const AboutUs = () => {
 
-  // WhatsApp click redirection handler mapping the core number directly
+  // WhatsApp click redirection handler mapping the new number directly
   const handleWhatsAppRedirect = () => {
-    const phoneNumber = "918744077832"; // Primary asset contact coordinate
+    const phoneNumber = "919319891418"; // Updated to your new primary number
     const message = encodeURIComponent("Hello Madhav Study Team, I want to book a free career consultation session for MBA/BBA/BCA/B.Com/BA/B.Ed/LLB admissions.");
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
@@ -44,9 +44,6 @@ const AboutUs = () => {
         </div>
       </div>
 
-      {/* 📊 2. REAL-TIME PLATFORM DATA METRICS RIBBON */}
-      
-
       {/* 🏢 3. CORE VALUE IDENTITY SEGMENT */}
       <div className="layout-wrapper py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -54,7 +51,7 @@ const AboutUs = () => {
           <div className="lg:col-span-7 space-y-6">
             <div className="space-y-2">
               <h2 className="text-2xl sm:text-3xl font-bold text-text-main tracking-tight">
-                We are <span className="text-brand-orange">, who we are.</span>
+                About <span className="text-brand-orange">Us</span>
               </h2>
               <div className="w-16 h-1 bg-brand-orange rounded-full mt-2" />
             </div>
@@ -72,7 +69,7 @@ const AboutUs = () => {
             <div className="absolute top-0 right-0 w-32 h-32 bg-brand-orange/5 rounded-bl-full" />
             <h3 className="text-lg font-bold text-text-main mb-6 flex items-center gap-2">
               <Users size={20} className="text-brand-orange" />
-              <span>Counseling Matrix</span>
+              <span>Consulting at Madhav study</span>
             </h3>
             <ul className="space-y-4">
               {[
@@ -128,45 +125,6 @@ const AboutUs = () => {
         </div>
       </div>
 
-      {/* 📚 5. EXCLUSIVE DOMAIN AND STREAM MATRIX */}
-      {/* <div className="layout-wrapper py-16 md:py-24">
-        <div className="mb-10">
-          <h2 className="text-2xl sm:text-3xl font-bold text-text-main tracking-tight">
-            For which courses should one seek admission guidance?
-          </h2>
-          <p className="text-text-muted text-xs sm:text-sm mt-2 font-light">
-            We assist in student admission into:
-          </p>
-          <div className="w-12 h-1 bg-brand-orange rounded-full mt-2" />
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[
-            { title: "Education & Teaching Programs", desc: "Top NCTE accredited institutions for both B.Ed. and M.Ed. Leading business schools and universities.", target: "B.Ed" },
-            { title: "Legal & Corporate Law Streams", desc: "BA LLB / LLB – Law institutions acknowledged by BCI.", target: "BA LLB • LLB" },
-            { title: "Executive Management Blocks", desc: "BBA / MBA – Leading business schools and universities.", target: "BBA • MBA" },
-            { title: "Professional Graduate Portfolios", desc: "BCA / B.Com / BA undergraduate professional structural pathways.", target: "BCA • B.Com • BA" },
-            { title: "Approved Alternative Learning", desc: "Valid and UGC-approved distance/online education pathways for specialized courses.", target: "UGC Approved Distance" }
-          ].map((domain, index) => (
-            <div key={index} className="bg-card-bg border border-border-main p-6 rounded-xl flex flex-col justify-between group hover:border-brand-orange/40 transition-all duration-300">
-              <div>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="bg-brand-blue/5 dark:bg-slate-800 text-brand-blue dark:text-brand-orange px-2.5 py-1 rounded text-[10px] font-bold uppercase tracking-wider">
-                    Official Channel
-                  </span>
-                  <BookOpen size={18} className="text-text-muted/40 group-hover:text-brand-orange transition-colors" />
-                </div>
-                <h3 className="text-base font-bold text-text-main mb-2">{domain.title}</h3>
-                <p className="text-xs text-text-muted font-light leading-relaxed mb-4">{domain.desc}</p>
-              </div>
-              <div className="pt-3 border-t border-border-main/40 text-xs text-brand-orange font-semibold">
-                🎓 {domain.target}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div> */}
-
       {/* 🎯 6. STRATEGIC MISSION & VISION STACK */}
       <div className="bg-slate-900 text-white py-16 md:py-20 relative">
         <div className="layout-wrapper grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -216,11 +174,12 @@ const AboutUs = () => {
               </div>
               <div className="flex items-center gap-3 text-white bg-slate-50 dark:bg-slate-900 p-3 rounded-xl border border-border-main/60">
                 <PhoneCall size={16} className="text-brand-orange shrink-0" />
-                <span className="text-xs font-semibold tracking-wide">+91 8744077832</span>
+                <span className="text-xs font-semibold tracking-wide">+91 9319891418</span>
               </div>
             </div>
 
-            <div className="pt-4">
+            {/* Added 'lg:hidden' class to make this button mobile-only */}
+            <div className="pt-4 lg:hidden">
               <button
                 onClick={handleWhatsAppRedirect}
                 className="inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 active:scale-98 cursor-pointer"

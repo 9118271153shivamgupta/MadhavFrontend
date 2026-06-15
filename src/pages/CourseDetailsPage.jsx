@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { coursesData } from '../data/coursesData';
-import { ArrowLeft, CheckCircle, HelpCircle, ShieldCheck } from 'lucide-react';
+import { ArrowLeft, ShieldCheck, HelpCircle, X, Send } from 'lucide-react';
 
 const CourseDetailsPage = () => {
   const { courseId } = useParams();
+  const [isFormOpen, setIsFormOpen] = useState(false); // Modal state trigger handle
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: ''
+  });
 
   // Find targeted specific course entry from array dynamically
   const course = coursesData.find((item) => item.id === courseId.toLowerCase());
@@ -18,6 +24,31 @@ const CourseDetailsPage = () => {
       </div>
     );
   }
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  // Handle Form Submission and Redirect to WhatsApp with updated target number
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    const phoneNumber = "919319891418"; // Updated tracking number structure
+    
+    const rawMessage = `*New Stream Admission Request* 🎓\n\n` +
+                       `👤 *Name:* ${formData.name}\n` +
+                       `📧 *Email:* ${formData.email || 'Not Provided'}\n` +
+                       `📞 *Phone:* ${formData.phone}\n` +
+                       `📚 *Applied Course:* ${course.name}\n\n` +
+                       `Please assist me with the registration guidelines.`;
+
+    const encodedMessage = encodeURIComponent(rawMessage);
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+    
+    // Reset parameters safely
+    setIsFormOpen(false);
+    setFormData({ name: '', email: '', phone: '' });
+  };
 
   return (
     <div className="layout-wrapper py-8 sm:py-12 lg:py-16 font-poppins transition-colors duration-300">
@@ -89,12 +120,85 @@ const CourseDetailsPage = () => {
             </p>
           </div>
 
-          <button className="w-full bg-brand-orange hover:bg-brand-orange/95 text-white font-bold text-sm py-3.5 rounded-xl transition-all shadow-md active:scale-98 cursor-pointer text-center">
+          {/* Apply Button - Added 'lg:hidden' to hide completely on desktop view */}
+          <button 
+            onClick={() => setIsFormOpen(true)}
+            className="w-full lg:hidden bg-brand-orange hover:bg-brand-orange/95 text-white font-bold text-sm py-3.5 rounded-xl transition-all shadow-md active:scale-98 cursor-pointer text-center"
+          >
             Apply Now For This Stream
           </button>
         </div>
 
       </div>
+
+      {/* 🌟 DYNAMIC ADMISSION MODAL POP-UP FORM FOR MOBILE 🌟 */}
+      {isFormOpen && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
+          <div className="bg-white dark:bg-slate-900 border border-border-main max-w-md w-full p-6 sm:p-8 rounded-3xl shadow-2xl relative overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+            <div className="absolute top-0 right-0 w-24 h-24 bg-brand-orange/5 rounded-bl-full" />
+            
+            {/* Close Button */}
+            <button 
+              onClick={() => setIsFormOpen(false)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-black dark:hover:text-white transition-colors"
+            >
+              <X size={20} />
+            </button>
+
+            <div className="mb-6 space-y-1 text-left">
+              <h3 className="text-lg font-extrabold text-black dark:text-white tracking-tight">Stream Registration</h3>
+              <p className="text-xs text-gray-500 dark:text-gray-400 font-light">You are applying for <span className="font-semibold text-brand-orange">{course.name}</span></p>
+            </div>
+
+            <form onSubmit={handleFormSubmit} className="space-y-4 text-left">
+              <div>
+                <input 
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  className="w-full bg-slate-50 dark:bg-slate-800 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 text-xs text-black dark:text-white focus:outline-none focus:border-brand-orange transition-colors font-medium placeholder:text-gray-400"
+                />
+              </div>
+
+              <div>
+                <input 
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  className="w-full bg-slate-50 dark:bg-slate-800 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 text-xs text-black dark:text-white focus:outline-none focus:border-brand-orange transition-colors font-medium placeholder:text-gray-400"
+                />
+              </div>
+
+              <div>
+                <input 
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number"
+                  required
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  className="w-full bg-slate-50 dark:bg-slate-800 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 text-xs text-black dark:text-white focus:outline-none focus:border-brand-orange transition-colors font-medium placeholder:text-gray-400"
+                />
+              </div>
+
+              {/* Form Action Submit Button */}
+              <button 
+                type="submit"
+                className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs py-3.5 rounded-xl transition-all shadow-md hover:shadow-lg active:scale-[0.98] flex items-center justify-center gap-2 tracking-wide cursor-pointer uppercase mt-2"
+              >
+                <Send size={14} />
+                <span>Submit Application</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
 
     </div>
   );
