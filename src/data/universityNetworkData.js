@@ -1,4 +1,5 @@
 // Dynamic Institutional Network Database - Mapped all 41 Colleges from Image
+
 export const universityNetworkData = [
   { 
     id: 1, 
@@ -9,7 +10,7 @@ export const universityNetworkData = [
     rating: "NAAC A+", 
     estd: "2011", 
     courses: "B.Tech • MBA • BCA", 
-    image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80", 
+    image: "/1.jpeg", 
     url: "https://www.galgotiasuniversity.edu.in" 
   },
   { 
@@ -21,7 +22,7 @@ export const universityNetworkData = [
     rating: "NIRF Ranked", 
     estd: "2005", 
     courses: "B.Tech • MBA • MCA", 
-    image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=600&q=80", 
+    image: "/2.jpeg", 
     url: "https://www.glbitm.org" 
   },
   { 
@@ -33,7 +34,7 @@ export const universityNetworkData = [
     rating: "Autonomous", 
     estd: "2001", 
     courses: "B.Tech • M.Tech • MBA", 
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=600&q=80", 
+    image: "/3.jpeg", 
     url: "https://www.niet.co.in" 
   },
   { 
@@ -45,7 +46,7 @@ export const universityNetworkData = [
     rating: "AICTE Approved", 
     estd: "2001", 
     courses: "B.Tech • MBA • BBA", 
-    image: "https://images.unsplash.com/photo-1592280771190-3e2e4d571952?auto=format&fit=crop&w=600&q=80", 
+    image: "/4.jpeg", 
     url: "https://www.gniotgroup.edu.in" 
   },
   { 
@@ -57,7 +58,7 @@ export const universityNetworkData = [
     rating: "NAAC A++", 
     estd: "1993", 
     courses: "Medical • B.Tech • MBA", 
-    image: "https://images.unsplash.com/photo-1607237138185-eedd996e5b00?auto=format&fit=crop&w=600&q=80", 
+    image: "/5.jpeg", 
     url: "https://www.mmumullana.org" 
   },
   { 
@@ -69,7 +70,7 @@ export const universityNetworkData = [
     rating: "AICTE Approved", 
     estd: "2001", 
     courses: "B.Tech • MBA • Integrated", 
-    image: "https://images.unsplash.com/photo-1527891751199-7225231a68dd?auto=format&fit=crop&w=600&q=80", 
+    image: "/6.jpeg", 
     url: "https://www.jiit.ac.in" 
   },
   { 
@@ -81,7 +82,7 @@ export const universityNetworkData = [
     rating: "UGC Certified", 
     estd: "1986", 
     courses: "All Streams • Global", 
-    image: "https://images.unsplash.com/photo-1498243691581-b145c3f54a5c?auto=format&fit=crop&w=600&q=80", 
+    image: "/7.jpg", 
     url: "https://www.amity.edu" 
   },
   { 
@@ -93,7 +94,7 @@ export const universityNetworkData = [
     rating: "Institution of Eminence", 
     estd: "2011", 
     courses: "B.Tech • B.Sc • MBA", 
-    image: "https://images.unsplash.com/photo-1519452635265-7b1fbfd1e4e0?auto=format&fit=crop&w=600&q=80", 
+    image: "/8.jpg", 
     url: "https://snu.edu.in" 
   },
   { 
@@ -105,7 +106,7 @@ export const universityNetworkData = [
     rating: "Premium Industry Ties", 
     estd: "2016", 
     courses: "B.Tech • BBA • Law • Media", 
-    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80", 
+    image: "/9.jpg", 
     url: "https://www.bennett.edu.in" 
   },
   { 
@@ -117,7 +118,7 @@ export const universityNetworkData = [
     rating: "GGSIPU Affiliated", 
     estd: "2012", 
     courses: "B.Tech • B.Arch • MBA", 
-    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=600&q=80", 
+    image: "/10.jpg", 
     url: "https://delhitechnicalcampus.co.in" 
   },
   { 
@@ -129,7 +130,7 @@ export const universityNetworkData = [
     rating: "NBA Accredited", 
     estd: "1998", 
     courses: "B.Tech • B.Pharm • MCA", 
-    image: "https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=600&q=80", 
+    image: "/11.jpg", 
     url: "https://www.kiet.edu" 
   },
   { 
@@ -141,7 +142,7 @@ export const universityNetworkData = [
     rating: "UGC Recognized", 
     estd: "2013", 
     courses: "B.Tech • BBA • B.Com", 
-    image: "https://images.unsplash.com/photo-1492538368677-f6e0afe31dcc?auto=format&fit=crop&w=600&q=80", 
+    image: "/12.jpg", 
     url: "https://www.krmangalam.edu.in" 
   },
   { 
@@ -153,7 +154,7 @@ export const universityNetworkData = [
     rating: "NAAC A++ Grade", 
     estd: "1997", 
     courses: "B.Tech • BDS • MBA", 
-    image: "https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=600&q=80", 
+    image: "/13.jpg", 
     url: "https://manavrachna.edu.in" 
   },
   { 
@@ -165,7 +166,7 @@ export const universityNetworkData = [
     rating: "Globally Approved", 
     estd: "2009", 
     courses: "Medical • B.Tech • MBA", 
-    image: "https://images.unsplash.com/photo-1525921429624-479b6c294591?auto=format&fit=crop&w=600&q=80", 
+    image: "/14.jpg", 
     url: "https://www.sharda.ac.in" 
   },
   { 
@@ -177,7 +178,7 @@ export const universityNetworkData = [
     rating: "Approved by AICTE", 
     estd: "1994", 
     courses: "B.Tech • MBA • Polytechnic", 
-    image: "https://images.unsplash.com/photo-1595853035070-59a39fe84de3?auto=format&fit=crop&w=600&q=80", 
+    image: "/15.jpg", 
     url: "https://www.iimtindia.net" 
   },
   { 
@@ -189,7 +190,7 @@ export const universityNetworkData = [
     rating: "Best Architecture Hub", 
     estd: "2012", 
     courses: "B.Arch • Design • B.Tech", 
-    image: "https://images.unsplash.com/photo-1564981797816-1043664bf78d?auto=format&fit=crop&w=600&q=80", 
+    image: "/16.jpg", 
     url: "https://sushantuniversity.edu.in" 
   },
   { 
@@ -201,7 +202,7 @@ export const universityNetworkData = [
     rating: "NBA Accredited", 
     estd: "1998", 
     courses: "B.Tech • MBA • MCA", 
-    image: "https://images.unsplash.com/photo-1590012314607-cda9d9b6a9a7?auto=format&fit=crop&w=600&q=80", 
+    image: "/17.jpg", 
     url: "https://jssaten.ac.in" 
   },
   { 
@@ -213,7 +214,7 @@ export const universityNetworkData = [
     rating: "Premium Management", 
     estd: "1993", 
     courses: "MBA • B.Tech • BBA", 
-    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=600&q=80", 
+    image: "/18.jpg", 
     url: "https://iilm.edu" 
   },
   { 
@@ -225,7 +226,7 @@ export const universityNetworkData = [
     rating: "Approved B-School", 
     estd: "2003", 
     courses: "Law • Pharmacy • MBA", 
-    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=80", 
+    image: "/19.jpg", 
     url: "https://www.lloydinstitute.org" 
   },
   { 
@@ -237,7 +238,7 @@ export const universityNetworkData = [
     rating: "NAAC A+ Category 1", 
     estd: "2013", 
     courses: "B.Tech • MBA • Law", 
-    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80", 
+    image: "/20.jpg", 
     url: "https://www.srmist.edu.in" 
   },
   { 
@@ -249,7 +250,7 @@ export const universityNetworkData = [
     rating: "UGC 12B Status", 
     estd: "2010", 
     courses: "Medical • B.Tech • Nursing", 
-    image: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=600&q=80", 
+    image: "/21.jpg", 
     url: "https://niu.edu.in" 
   },
   { 
@@ -261,7 +262,7 @@ export const universityNetworkData = [
     rating: "Top Placement Center", 
     estd: "2006", 
     courses: "B.Tech • MBA", 
-    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80", 
+    image: "/22.jpg", 
     url: "https://gnoida.dronacharya.info" 
   },
   { 
@@ -273,7 +274,7 @@ export const universityNetworkData = [
     rating: "UGC / Medical Approved", 
     estd: "2013", 
     courses: "MD • BDS • B.Tech • MBA", 
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80", 
+    image: "/23.jpg", 
     url: "https://sgtuniversity.ac.in" 
   },
   { 
@@ -285,7 +286,7 @@ export const universityNetworkData = [
     rating: "State Private Univ", 
     estd: "2016", 
     courses: "B.Tech • B.Sc • MBA • MCA", 
-    image: "https://images.unsplash.com/photo-1558441719-ff34b0524a24?auto=format&fit=crop&w=600&q=80", 
+    image: "/24.jpg", 
     url: "https://www.iimtu.com" 
   },
   { 
@@ -297,7 +298,7 @@ export const universityNetworkData = [
     rating: "NAAC A+ 12B Status", 
     estd: "1998", 
     courses: "B.Tech • B.Pharm • MBA", 
-    image: "https://images.unsplash.com/photo-1565034946487-077786996e27?auto=format&fit=crop&w=600&q=80", 
+    image: "/25.jpg", 
     url: "https://www.gla.ac.in" 
   },
   { 
@@ -309,7 +310,7 @@ export const universityNetworkData = [
     rating: "UGC Recognized", 
     estd: "2006", 
     courses: "B.Tech • Law • Research", 
-    image: "https://images.unsplash.com/photo-1519452575417-564c1401ecc0?auto=format&fit=crop&w=600&q=80", 
+    image: "/26.jpg", 
     url: "https://www.mangalayatan.in" 
   },
   { 
@@ -321,7 +322,7 @@ export const universityNetworkData = [
     rating: "AKTU Affiliated", 
     estd: "2008", 
     courses: "B.Tech • MBA • Diploma", 
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80", 
+    image: "/27.jpg", 
     url: "https://aimt.edu.in" 
   },
   { 
@@ -333,7 +334,7 @@ export const universityNetworkData = [
     rating: "AICTE Approved", 
     estd: "2008", 
     courses: "B.Tech • Management", 
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80", 
+    image: "/28.jpg", 
     url: "https://shreeram.edu.in" 
   },
   { 
@@ -345,7 +346,7 @@ export const universityNetworkData = [
     rating: "UGC Approved Private", 
     estd: "2004", 
     courses: "B.Tech • MBBS • Architecture", 
-    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80", 
+    image: "/29.jpg", 
     url: "https://iul.ac.in" 
   },
   { 
@@ -357,7 +358,7 @@ export const universityNetworkData = [
     rating: "UGC Certified Private", 
     estd: "1998", 
     courses: "B.Tech • MBA • BCA • BBA", 
-    image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=600&q=80", 
+    image: "/30.jpg", 
     url: "https://www.invertisuniversity.ac.in" 
   },
   { 
@@ -369,7 +370,7 @@ export const universityNetworkData = [
     rating: "UGC Recognized", 
     estd: "2010", 
     courses: "B.Tech • BDS • MBA • Law", 
-    image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=600&q=80", 
+    image: "/31.jpg", 
     url: "https://bbdu.ac.in" 
   },
   { 
@@ -381,7 +382,7 @@ export const universityNetworkData = [
     rating: "Top Corporate Placements", 
     estd: "2006", 
     courses: "B.Tech • PGDM • MBA", 
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80", 
+    image: "/32.jpg", 
     url: "https://www.accurate.in" 
   },
   { 
@@ -393,7 +394,7 @@ export const universityNetworkData = [
     rating: "UGC Recog Private", 
     estd: "2016", 
     courses: "B.Tech • BBA • Commerce", 
-    image: "https://images.unsplash.com/photo-1455849318743-b2233052fcff?auto=format&fit=crop&w=600&q=80", 
+    image: "/33.jpg", 
     url: "https://starexuniversity.edu.in" 
   },
   { 
@@ -405,7 +406,7 @@ export const universityNetworkData = [
     rating: "Deemed-to-be University", 
     estd: "1998", 
     courses: "B.Tech • B.Ed • MBA", 
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80", 
+    image: "/34.jpg", 
     url: "https://www.lingayasvidyapeeth.edu.in" 
   },
   { 
@@ -417,7 +418,7 @@ export const universityNetworkData = [
     rating: "NAAC A+ Category 1", 
     estd: "1980", 
     courses: "B.Tech • Medical • MBA", 
-    image: "https://images.unsplash.com/photo-1513258496099-48168024addd?auto=format&fit=crop&w=600&q=80", 
+    image: "/35.jpg", 
     url: "https://www.gitam.edu" 
   },
   { 
@@ -429,7 +430,7 @@ export const universityNetworkData = [
     rating: "Approved by AICTE", 
     estd: "2007", 
     courses: "B.Tech • BBA • MBA", 
-    image: "https://images.unsplash.com/photo-1541829017064-8c170022a5bd?auto=format&fit=crop&w=600&q=80", 
+    image: "/36.jpg", 
     url: "https://www.ditm.ac.in" 
   },
   { 
@@ -441,7 +442,7 @@ export const universityNetworkData = [
     rating: "Approved University", 
     estd: "2000", 
     courses: "B.Tech • Pharmacy • BBA", 
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80", 
+    image: "/37.jpg", 
     url: "https://sunderdeep.ac.in" 
   },
   { 
@@ -453,7 +454,7 @@ export const universityNetworkData = [
     rating: "X-Industry Curriculum", 
     estd: "1992", 
     courses: "B.Tech • Law • Agriculture", 
-    image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80", 
+    image: "/38.jpg", 
     url: "https://www.geetauniversity.edu.in" 
   },
   { 
@@ -465,7 +466,7 @@ export const universityNetworkData = [
     rating: "Top Dental & IT Cluster", 
     estd: "1995", 
     courses: "BCA • BBA • MCA • MBA", 
-    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80", 
+    image: "/39.jpg", 
     url: "https://www.its.edu.in" 
   },
   { 
@@ -477,7 +478,7 @@ export const universityNetworkData = [
     rating: "NAAC Accredited", 
     estd: "2006", 
     courses: "B.Tech • Biotech • MBA", 
-    image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=600&q=80", 
+    image: "/40.jpg", 
     url: "https://www.shobhituniversity.ac.in" 
   },
   { 
@@ -489,7 +490,7 @@ export const universityNetworkData = [
     rating: "AICTE Approved PGDM", 
     estd: "2011", 
     courses: "PGDM • Executive • Global MBA", 
-    image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=600&q=80", 
+    image: "/41.jpg", 
     url: "https://abs.edu.in" 
   }
 ];
